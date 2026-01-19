@@ -1,0 +1,12 @@
+chunking:
+  chunk_size: 800
+  chunk_overlap: 120
+  separator: "\n"
+vector_store:
+  persist_directory: embeddings/vector_store
+  collection_name: agentic_rag_docs
+  distance_metric: cosine
+retrieval:
+  top_k: 4
+  score_threshold: 0.35
+  rerank: false
