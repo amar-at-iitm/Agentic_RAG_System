@@ -1,11 +1,14 @@
 global:
   provider: anthropic
   model: claude-sonnet-4.5
+
   temperature: 0.2
   top_p: 0.9
   max_output_tokens: 1024
   stream: false
+
   enable_claude_sonnet_4_5: true
+
   client_policy:
     enforce: true
     clients:
@@ -13,27 +16,34 @@ global:
       - streamlit
       - api
     reason: All interaction surfaces must default to Claude Sonnet 4.5 for parity.
+
   fallback:
     provider: ollama
     model: mistral
     temperature: 0.1
     max_output_tokens: 512
+
 agents:
   planner:
     temperature: 0.1
     max_output_tokens: 400
+
   retriever:
     temperature: 0.0
     max_output_tokens: 200
+
   reasoning:
     temperature: 0.3
     max_output_tokens: 900
+
   verifier:
     temperature: 0.15
     max_output_tokens: 400
+
   answer:
     temperature: 0.2
     max_output_tokens: 700
+
 embeddings:
   provider: ollama
   model: nomic-embed-text

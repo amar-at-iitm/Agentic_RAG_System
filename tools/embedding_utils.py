@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_ollama import OllamaEmbeddings
 
 from tools.config_loader import load_yaml_file
 
